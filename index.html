@@ -35,15 +35,20 @@ nada de estos lenguajes. Si quieres aprender luego, te recomendamos ver lo sigui
       }
     </style>
     <!-- Dentro del head puedes agregar también otros scripts de librerías. -->
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
     <!-- Fin de head. -->
   </head>
   <!-- Dentro de body puedes añadir y modificar el contenido de la página. -->
   <body>
     <h1>¡Hola Lucas Ilabaca!</h1>
+    <canvas id="my-canvas"></canvas>
   </body>
   <script>
     // Aquí puedes dejar código JavaScript que se ejecutará cuando la página se cargue.
     // Importante: no debes importar ningún script externo aquí.
     // Para eso, utiliza script src dentro del head.
+    var confettiSettings = { target: 'my-canvas' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
   </script>
 </html>
